@@ -1,0 +1,31 @@
+clear
+function banner(){
+toilet -f pagga BHI OFFICAL |lolcat
+echo "############################################################"|lolcat
+echo "   mm.           dM8"|lolcat
+echo "   YMMMb.       dMM8"|lolcat
+echo "    YMMMMb     dMMM'"|lolcat
+echo "     YMMMb   dMMMP"|lolcat
+echo "       YMMM  MMM'"|lolcat
+echo "          MbdMP"|lolcat
+echo "      .dMMMMMM.P   -=[ SPAM CALL TERMUX]=-"|lolcat
+echo "     dMM  MMMMMMM  -=[Coded By : Mr.F3eLL]=-"|lolcat
+echo "     8MMMMMMMMMMI  -=[Team : BlackHat Hacker Indonesia]=-"|lolcat
+echo "      YMMMMMMMMM   -=[Facebook : Rafell]=-"|lolcat
+echo "        MMMMMMP"|lolcat
+echo "       MxM .mmm"|lolcat
+echo "############################################################"|lolcat
+}
+function call(){
+send=$(curl -s -k https://0x.nakocoders.org/rest-api/lain-nya/api.php?nomor=$no)
+if [[ $send =~ '{"succes":0,"msg":"Berhasil"}' ]]; then
+echo -e "\033[96m[\033[92m+\033[96m]\033[97m $no => \033[92m SUCCESS"
+else
+echo -e "\033[96m[\033[91m-\033[96m]\033[97m $no => \033[91m FAIL"
+fi
+}
+banner
+read -p "[+] List Number > " list
+for no in $(cat $list); do
+call
+done
